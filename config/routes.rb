@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   devise_for :users
+  #only this
 
   root to: "boards#index"
 
