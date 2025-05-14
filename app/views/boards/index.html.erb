@@ -44,18 +44,19 @@
       <a href="/boards/<%= a_board.id %>">
         <%= a_board.name %>
       </a>
+    </li>
 
-      <div>
-        <% matching_users = User.where({ :id => a_board.user_id }) %>
+    <li>
+        <% matching_user = User.where({ :id => a_board.user_id}) %>
 
-        <% the_user = matching_users.at(0) %>
+        <% the_user = matching_user.at(0) %>
 
         <%= the_user.email %>
 
-      </div>
-      
-      <hr>
     </li>
+
+      <hr>
+
     
   <% end %>
 </ul>
